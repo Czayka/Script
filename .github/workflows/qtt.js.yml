@@ -29,6 +29,7 @@ jobs:
               run: |
                   node onlyOneExecute.js
               env:
+                  JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   senku_signKey_qtt: ${{ secrets.senku_signKey_qtt }}
                   senku_signXTK_qtt: ${{ secrets.senku_signXTK_qtt }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}

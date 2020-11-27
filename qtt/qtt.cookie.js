@@ -1,8 +1,8 @@
 const cookieName = '趣头条'
-const signKey = 'senku_signKey_qtt'
-const signXTKKey = 'senku_signXTK_qtt'
-const readKey = 'senku_readKey_qtt'
-const navCoinKey = 'senku_navCoinKey_qtt'
+const signKey = 'process.env.senku_signKey_qtt'
+const signXTKKey = 'process.env.senku_signXTK_qtt'
+const readKey = 'process.env.senku_readKey_qtt'
+const navCoinKey = 'process.env.senku_navCoinKey_qtt'
 const senku = init()
 
 const requrl = $request.url

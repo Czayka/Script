@@ -1,5 +1,7 @@
 # 趣头条
 
+# 脚本来源[@chavyleung](https://github.com/chavyleung)
+
 > 代码已同时兼容 Surge & QuanX, 使用同一份签到脚本即可
 
 > QuanX 需要: v1.0.6-build195 及以后版本 (TestFlight)
@@ -119,6 +121,8 @@ api.1sapp.com
      ```
 
 ## 感谢
+
+[@chavyleung](https://github.com/chavyleung)
 
 [@NobyDa](https://github.com/NobyDa)
 

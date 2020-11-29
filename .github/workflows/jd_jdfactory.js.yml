@@ -6,7 +6,7 @@ name: 东东工厂
 on:
     workflow_dispatch:
     schedule:
-        - cron: "2 1-21/5 * * *"
+        - cron: "2 */1 * * *"
     watch:
         types: [started]
     repository_dispatch:

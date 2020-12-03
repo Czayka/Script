@@ -4,6 +4,8 @@ const ZD_SHARECODE='olmijoxgmjutzz4xm5rqyyocxme5zphvx455tfq';
 const NC_SHARECODE='a3b56ca6636641f88222cef9762bf664';
 const MC_SHARECODE='MTAxODExNTM5NDAwMDAwMDAzOTYwNTgwMw==';
 
+ddgc_upload_shareCode();
+
 //东东工厂提交分享码
 function ddgc_upload_shareCode(timeout = 0) {
     return new Promise((resolve) => {

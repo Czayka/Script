@@ -30,6 +30,7 @@ jobs:
                   node onlyOneExecute.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                  JD_JOY_REWARD_NAME: ${{ secrets.JD_JOY_REWARD_NAME }}
                   JD_DEBUG: ${{ secrets.JD_DEBUG }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}

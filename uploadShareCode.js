@@ -1,19 +1,3 @@
-/*
-京小超兑换奖品 脚本地址：https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
-感谢@yangtingxiao提供PR
-更新时间：2020-11-23
-支持京东多个账号
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-======================quantumultx===============
-[task_local]
-#京小超兑换奖品
-0 0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京小超兑换奖品, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
-====================Loon=================
-[Script]
-cron "0 0 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js,tag=京小超兑换奖品
-===================Surge==================
-京小超兑换奖品 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
- */
 const DDGC_SHARECODE='P04z54XCjVWnYaS5m9cZ2b5i38cwEawyPk_T7Q';
 const JXGC_SHARECODE='woUSQ_yPOFrJB9dZ6MdwZQ==';
 const ZD_SHARECODE='olmijoxgmjutzz4xm5rqyyocxme5zphvx455tfq';

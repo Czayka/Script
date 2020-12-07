@@ -29,6 +29,7 @@ jobs:
               run: |
                   node onlyOneExecute.js
               env:
+                  QQREAD_BODY: ${{ secrets.QQREAD_BODY }}
                   QQREAD_HEADER: ${{ secrets.QQREAD_HEADER }}
                   QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
                   QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}

@@ -91,7 +91,7 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));
-    notify.sendNotify("互助码",$.msg);
+    notify.sendNotify("互助码",($.name, "", $.result.join("\n")));
     resolve();
   });
 }

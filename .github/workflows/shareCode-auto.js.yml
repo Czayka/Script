@@ -30,12 +30,12 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.QQREAD_HEADER
+        if: env.NC_SHARECODE
         run: |
           cd ~/JD
           npm install
       - name: '运行 【自动提交分享码】'
-        if: env.QQREAD_HEADER
+        if: env.NC_SHARECODE
         run: |
           cd ~/JD
           node shareCode-auto.js

@@ -1,4 +1,5 @@
 const $ = new Env("互助码");
+notify = $.isNode() ? require('./sendNotify') : '';
 const shareCodes = [
   {
     zd: process.env.ZD_SHARECODE || "olmijoxgmjutzz4xm5rqyyocxme5zphvx455tfq",
@@ -90,6 +91,7 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));
+    await notify.sendNotify($.msg,$.name, "", $.result.join("\n"));
     resolve();
   });
 }

@@ -91,7 +91,7 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));
-    await notify.sendNotify($.msg,$.name, "", $.result.join("\n"));
+    notify.sendNotify($.msg,$.name, "", $.result.join("\n"));
     resolve();
   });
 }

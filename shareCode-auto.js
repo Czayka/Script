@@ -50,7 +50,7 @@ $.random = Math.floor(Math.random() * 60);
     await $.wait($.random);
     jdzz &&
       (await create(
-        `http://api.turinglabs.net/api/v1/jd/jdzz/create/${jdzz}/`,
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
         "京东赚赚"
       ));
   }

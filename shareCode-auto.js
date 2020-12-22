@@ -73,7 +73,7 @@ function create(path, name) {
         if (needAgain) return;
         const { message } = JSON.parse(data);
         const { msg } = JSON.parse(data);
-        const { push_message } = { message } === null ? { msg } : { message };
+        const { push_message } = { message } == null ? { msg } : { message };
         $.log(`\n${message}\n${data}`);
         $.result.push(`${name}： ${push_message}`);
       } catch (e) {

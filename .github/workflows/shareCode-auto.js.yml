@@ -6,7 +6,7 @@ name: 自动提交分享码
 on:
   workflow_dispatch:
   schedule:
-     - cron: '10 18 9,19,L * *'
+     - cron: '10 18 9,19,31 * *'
   watch:
     types: started
 

@@ -1,6 +1,6 @@
 const $ = new Env("互助码");
-//const notify = $.isNode() ? require('./sendNotify') : '';
-/*const shareCodes = [
+const notify = $.isNode() ? require('./sendNotify') : '';
+const shareCodes = [
   {
     zd: process.env.ZD_SHARECODE || "olmijoxgmjutzz4xm5rqyyocxme5zphvx455tfq",
     nc: process.env.NC_SHARECODE || "a3b56ca6636641f88222cef9762bf664",
@@ -8,16 +8,6 @@ const $ = new Env("互助码");
     ddgc: process.env.DD_SHARECODE || "P04z54XCjVWnYaS5m9cZ2b5i38cwEawyPk_T7Q",
     jxgc: process.env.JX_SHARECODE || "woUSQ_yPOFrJB9dZ6MdwZQ==",
     jdzz: process.env.ZZ_SHARECODE || "AUWE5mazGzmNdXGD_2nscwA",
-  },
-];*/
-const shareCodes = [
-  {
-    zd: "",
-    nc: "",
-    mc: "",
-    ddgc: "",
-    jxgc: "",
-    jdzz: "",
   },
 ];
 $.result = [];
@@ -112,7 +102,7 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
   });
 }
 function isUploadDay() {
-　　let toDay = new Date(new Date().getTime() + (8 + 24 * 10) * 60 * 60 * 1000).getDate();
+　　let toDay = new Date(new Date().getTime() + 8 * 60 * 60 * 1000).getDate();
     console.log(toDay);
     return (toDay == 1 || toDay == 10 || toDay == 20);
 　　/*if (toDay.getDate() < 21)
@@ -123,7 +113,7 @@ function isUploadDay() {
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));
-    //notify.sendNotify("互助码",($.name, "", $.result.join("\n")));
+    notify.sendNotify("互助码",($.name, "", $.result.join("\n")));
     resolve();
   });
 }

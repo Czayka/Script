@@ -72,7 +72,7 @@ if (isUploadShareCode){
   .catch((e) => $.logErr(e))
   .finally(() => $.done());
 }else{
-  console.log("")
+  console.log("不是指定日期");
 }
 
 function create(path, name) {

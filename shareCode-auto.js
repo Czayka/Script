@@ -112,7 +112,7 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
   });
 }
 function isUploadDay() {
-　　let toDay = new Date(new Date().getTime() + 32 * 60 * 60 * 1000).getDate();
+　　let toDay = new Date(new Date().getTime() + (8 + 24 * 9) * 60 * 60 * 1000).getDate();
     console.log(toDay);
     return (toDay == 1 || toDay == 10 || toDay == 20);
 　　/*if (toDay.getDate() < 21)

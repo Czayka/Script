@@ -26,7 +26,7 @@ console.log(`\n========= 脚本执行时间(TM)：${new Date(new Date().getTime(
 console.log(`\n========= 脚本执行时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`);
 const isUploadShareCode = isUploadDay() ;
 console.log(isUploadShareCode);
-if (isUploadDay){
+if (isUploadDay()){
   !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {

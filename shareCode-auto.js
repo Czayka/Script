@@ -1,6 +1,6 @@
 const $ = new Env("互助码");
-const notify = $.isNode() ? require('./sendNotify') : '';
-const shareCodes = [
+//const notify = $.isNode() ? require('./sendNotify') : '';
+/*const shareCodes = [
   {
     zd: process.env.ZD_SHARECODE || "olmijoxgmjutzz4xm5rqyyocxme5zphvx455tfq",
     nc: process.env.NC_SHARECODE || "a3b56ca6636641f88222cef9762bf664",
@@ -9,13 +9,23 @@ const shareCodes = [
     jxgc: process.env.JX_SHARECODE || "woUSQ_yPOFrJB9dZ6MdwZQ==",
     jdzz: process.env.ZZ_SHARECODE || "AUWE5mazGzmNdXGD_2nscwA",
   },
+];*/
+const shareCodes = [
+  {
+    zd: "",
+    nc: "",
+    mc: "",
+    ddgc: "",
+    jxgc: "",
+    jdzz: "",
+  },
 ];
 $.result = [];
 $.random = Math.floor(Math.random() * 60);
 console.log(`\n========= 脚本执行时间(TM)：${new Date(new Date().getTime() + 0 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`);
-console.log(`\n========= 脚本执行时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`)
-
-if (isLastDay){
+console.log(`\n========= 脚本执行时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`);
+const isUploadShareCode = await isUploadDay();
+if (isUploadShareCode){
   !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
@@ -61,6 +71,8 @@ if (isLastDay){
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done());
+}else{
+  console.log("")
 }
 
 function create(path, name) {
@@ -100,17 +112,18 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
     }
   });
 }
-function isLastDay() {
-　　let toDay = new Date();
-　　if (toDay.getDate() < 21)
-      return true;
+function isUploadDay() {
+　　let toDay = new Date(new Date().getTime() + 8 * 60 * 60 * 1000).getDate();
+    resolve(toDay == 1 || toDay == 10 || toDay == 20);
+　　/*if (toDay.getDate() < 21)
+      resolve(true);
 　　let nextDay = new Date(d.getTime() + 24 * 60 * 60 * 1000); //next day
-　　return (d.getMonth()!=nd.getMonth());
+　　resolve(d.getMonth()!=nd.getMonth());*/
 } 
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));
-    notify.sendNotify("互助码",($.name, "", $.result.join("\n")));
+    //notify.sendNotify("互助码",($.name, "", $.result.join("\n")));
     resolve();
   });
 }

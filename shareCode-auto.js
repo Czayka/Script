@@ -100,6 +100,8 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
 }
 function isLastDay() {
 　　let toDay = new Date();
+    console.log(`\n========= 脚本执行时间(TM)：${toDay.toLocaleString('zh', { hour12: false })} =========\n`);
+    console.log(`\n========= 脚本执行时间(UTC+8)：${new Date(toDay.getTime() + 8 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`)
 　　if (toDay.getDate() < 21)
       return true;
 　　let nextDay = new Date(d.getTime()+24*60*60*1000); //next day

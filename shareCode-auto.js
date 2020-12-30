@@ -13,7 +13,8 @@ const shareCodes = [
 $.result = [];
 $.random = Math.floor(Math.random() * 60);
 
-!(async () => {
+if (isLastDay){
+  !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
     const { zd, nc, mc, ddgc, jxgc, jdzz } = shareCodes[i];
@@ -58,6 +59,7 @@ $.random = Math.floor(Math.random() * 60);
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done());
+}
 
 function create(path, name) {
   return new Promise((resolve) => {
@@ -95,7 +97,13 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
     }
   });
 }
-
+function isLastDay() {
+　　let toDay = new Date();
+　　if (toDay.getDate() < 21)
+      return true;
+　　let nextDay = new Date(d.getTime()+24*60*60*1000); //next day
+　　return (d.getMonth()!=nd.getMonth());
+} 
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));

@@ -12,6 +12,8 @@ const shareCodes = [
 ];
 $.result = [];
 $.random = Math.floor(Math.random() * 60);
+console.log(`\n========= 脚本执行时间(TM)：${new Date(new Date().getTime() + 0 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`);
+console.log(`\n========= 脚本执行时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`)
 
 if (isLastDay){
   !(async () => {
@@ -100,8 +102,6 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
 }
 function isLastDay() {
 　　let toDay = new Date();
-    $.log(`\n========= 脚本执行时间(TM)：${toDay.toLocaleString('zh', { hour12: false })} =========\n`);
-    $.log(`\n========= 脚本执行时间(UTC+8)：${new Date(toDay.getTime() + 8 * 60 * 60 * 1000).toLocaleString('zh', { hour12: false })} =========\n`)
 　　if (toDay.getDate() < 21)
       return true;
 　　let nextDay = new Date(d.getTime() + 24 * 60 * 60 * 1000); //next day

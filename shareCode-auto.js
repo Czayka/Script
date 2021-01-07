@@ -8,6 +8,7 @@ const shareCodes = [
     ddgc: process.env.DD_SHARECODE || "P04z54XCjVWnYaS5m9cZ2b5i38cwEawyPk_T7Q",
     jxgc: process.env.JX_SHARECODE || "woUSQ_yPOFrJB9dZ6MdwZQ==",
     jdzz: process.env.ZZ_SHARECODE || "AUWE5mazGzmNdXGD_2nscwA",
+    jdjoy: process.env.JOY_SHARECODE || "of1jRUED4TVTD_RvVT6HZ6t9zd5YaBeE",
   },
 ];
 $.result = [];
@@ -54,6 +55,12 @@ if (isUploadDay()){
       (await create(
         `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
         "京东赚赚"
+      ));
+    await $.wait($.random);
+    jdjoy &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${jdjoy}/`,
+        "京东疯狂joy"
       ));
   }
   await showMsg();

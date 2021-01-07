@@ -20,6 +20,8 @@ jobs:
         MC_SHARECODE: ${{ secrets.MC_SHARECODE }}
         NC_SHARECODE: ${{ secrets.NC_SHARECODE }}
         ZD_SHARECODE: ${{ secrets.ZD_SHARECODE }}
+        ZZ_SHARECODE: ${{ secrets.ZZ_SHARECODE }}
+        JOY_SHARECODE: ${{ secrets.JOY_SHARECODE }}
         
     steps:
       - name: Checkout

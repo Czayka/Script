@@ -23,7 +23,11 @@ hostname = bububao.duoshoutuan.com,
 
 const $ = new Env('步步寶')
 let notice = ''
-let CookieVal = $.getdata('bbb_ck')
+const notify = $.isNode() ? require('./sendNotify') : '';
+let CookieVal = $.getdata('bbb_ck') || process.env.BBB_COOKIE
+const acTime = new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000;
+const acTimeHour = acTime.getHours();
+const acTimeMinutes = acTime.getMinutes();
 
 if ($.isNode()) {
       console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
@@ -46,8 +50,8 @@ if(CookieVal)$.setdata(CookieVal,'bbb_ck')
 !(async () => {
 
 $.msg($.name,"開始🎉🎉🎉")
-      showCookie()
-      /*await cashCheck()
+      //showCookie()
+      await cashCheck()
       await signIn()
       await checkWaterNum()
       await zaoWanDkInfo()
@@ -62,7 +66,7 @@ $.msg($.name,"開始🎉🎉🎉")
       await checkWaterNum()
       await checkHomeJin()
       await userInfo()
-      await showmsg()*/
+      await showmsg()
 
 })()
     .catch((e) => $.logErr(e))
@@ -74,8 +78,12 @@ function showCookie(){
 }
 
 function showmsg(){
-    $.msg($.name, '', notice)
-     }
+      $.msg($.name, '', notice)
+      notify.sendNotify("互助码",($.name, '', notice));
+      /*if((acTimeHour === 12 || acTimeHour ===23) && (acTimeMinutes >= 0 || acTimeMinutes <= 30)){
+            notify.sendNotify("互助码",($.name, '', notice));
+      }*/
+}
 
 var getBoxId = (function () {
     var i = 0;

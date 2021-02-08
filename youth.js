@@ -73,8 +73,8 @@ let notifyInterval = $.getdata("notifytimes")||50 //通知间隔，默认抽奖�
 const YOUTH_HOST = "https://kd.youth.cn/WebApi/";
 const notify = $.isNode() ? require('./sendNotify') : '';
 const withdrawcash = $.getdata('zqcash')||30 //提现金额
-let withdrawUrl =$.getdata('cashurl_zq')
-let withdrawBody =$.getdata('cashbody_zq')
+let withdrawUrl =$.getdata('cashurl_zq') || process.env.cashUrl
+let withdrawBody =$.getdata('cashbody_zq') || process.env.cashBody
 
 let logs = $.getdata('zqlogs')||false, rotaryscore=0,doublerotary=0,signresult; 
 let cookiesArr = [], signheaderVal = '',

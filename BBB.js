@@ -79,10 +79,9 @@ function showCookie(){
 
 function showmsg(){
       $.msg($.name, '', notice)
-      notify.sendNotify("互助码",($.name, '', notice));
-      /*if((acTimeHour === 12 || acTimeHour ===23) && (acTimeMinutes >= 0 || acTimeMinutes <= 30)){
-            notify.sendNotify("互助码",($.name, '', notice));
-      }*/
+      if((acTimeHour === 12 || acTimeHour ===23) && (acTimeMinutes >= 0 || acTimeMinutes <= 30)){
+            notify.sendNotify("步步宝",($.name, '', notice));
+      }
 }
 
 var getBoxId = (function () {

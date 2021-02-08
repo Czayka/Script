@@ -79,7 +79,7 @@ function showCookie(){
 
 function showmsg(){
       $.msg($.name, '', notice)
-      if((acTimeHour === 12 || acTimeHour ===23) && (acTimeMinutes >= 0 || acTimeMinutes <= 30)){
+      if((acTimeHour === 12 || acTimeHour === 22) && (acTimeMinutes >= 0 || acTimeMinutes <= 30)){
             notify.sendNotify("步步宝",($.name, '', notice));
       }
 }

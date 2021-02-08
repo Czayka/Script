@@ -25,7 +25,7 @@ const $ = new Env('步步寶')
 let notice = ''
 const notify = $.isNode() ? require('./sendNotify') : '';
 let CookieVal = $.getdata('bbb_ck') || process.env.BBB_COOKIE
-const acTime = new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000;
+const acTime = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000);
 const acTimeHour = acTime.getHours();
 const acTimeMinutes = acTime.getMinutes();
 

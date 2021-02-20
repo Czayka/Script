@@ -5,77 +5,7 @@ var body = {
   "retcode" : 0,
   "errmsg" : "",
   "data" : {
-    "signed" : 1,
-    "groups" : [
-      {
-        "minup" : "0",
-        "gicon" : "V0",
-        "gname" : "游客",
-        "play_daynum" : 15,
-        "down_daynum" : 0,
-        "comment_daynum" : 0
-      },
-      {
-        "minup" : "0",
-        "gicon" : "V1",
-        "gname" : "VIP1",
-        "play_daynum" : 25,
-        "down_daynum" : 4,
-        "comment_daynum" : 5
-      },
-      {
-        "minup" : "2",
-        "gicon" : "V2",
-        "gname" : "VIP2",
-        "play_daynum" : 50,
-        "down_daynum" : 10,
-        "comment_daynum" : 10
-      },
-      {
-        "minup" : "5",
-        "gicon" : "V3",
-        "gname" : "VIP3",
-        "play_daynum" : 100,
-        "down_daynum" : 20,
-        "comment_daynum" : 15
-      },
-      {
-        "minup" : "10",
-        "gicon" : "V4",
-        "gname" : "VIP4",
-        "play_daynum" : 200,
-        "down_daynum" : 40,
-        "comment_daynum" : 20
-      },
-      {
-        "minup" : "20",
-        "gicon" : "V5",
-        "gname" : "尊贵VIP",
-        "play_daynum" : 999,
-        "down_daynum" : 100,
-        "comment_daynum" : 30
-      }
-    ],
-    "uinfo" : {
-      "curr_group" : {
-        "minup" : "20",
-        "gicon" : "V5",
-        "gid" : "5",
-        "gname" : "尊贵VIP"
-      },
-      "next_group" : {
-        "minup" : "65535",
-        "gicon" : "",
-        "gid" : "6",
-        "gname" : "禁止发言"
-      },
-      "next_upgrade_need" : 65535,
-      "down_daily_remainders" : 100,
-      "play_daily_remainders" : 999,
-      "goldcoin" : "1"
-    },
-    "reqplay_addnum" : "0",
-    "reqdown_addnum" : "0",
+    "adbypass" : 5,
     "user" : {
       "duetime" : "2039-02-24 00:36:54",
       "sysgid" : "5",
@@ -87,7 +17,7 @@ var body = {
       "gicon" : "V5",
       "gid" : "1",
       "avatar" : "",
-      "dueday" : "9999天后过期",
+      "dueday" : "99999天后过期",
       "mobi" : "86.18065988029",
       "username" : "~小小影迷-JZIHJQ",
       "goldcoin" : 1,
@@ -96,7 +26,43 @@ var body = {
       "email" : "~1208506454",
       "isvip" : 1,
       "gender" : "0"
+    },
+    "appver" : {
+      "iOsUrls" : [
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/",
+        "http://tf.niux123.com/"
+      ],
+      "AppStor1s" : "发现重要新版本，请马上升级吧！\n1、解决部分资源无法播放以及卡顿问题。\n2、增加多个播放线路选择，多线路切换，播放不卡顿\n3、修复偶发性网络错误bug。\n4、提升离线下载速度，提升稳定性，修复闪退Bug。\n重要提示：旧版本将停止维护，届时将无法观看，请尽快升级最新版本，造成不便敬请谅解!",
+      "AppStoreVer" : "2.4.9",
+      "AndroidUrls" : [
+        "https://www.qnjyzn.com/03app0217-2.apk",
+        "https://www.qnjyzn.com/03app0217-2.apk",
+        "https://app.pianmen888.com/未用2.apk",
+        "https://app.pianmen888.com/未用3.apk"
+      ],
+      "iOSUrl" : "暂时没用的",
+      "AndroidTips" : "发现重要新版本，请马上升级吧！\n1、解决部分资源无法播放以及卡顿问题。\n2、增加多个播放线路选择，多线路切换，播放不卡顿\n3、修复偶发性网络错误bug。\n4、提升离线下载速度，提升稳定性，修复闪退Bug。\n重要提示：旧版本将停止维护，届时将无法观看，请尽快升级最新版本，造成不便敬请谅解! ",
+      "iOSVer" : "2.4.9",
+      "AppStoreUrls" : [
+        "http://tf.niux123.com/"
+      ],
+      "iOSTips" : "发现重要新版本，请马上升级吧！\n1、解决部分资源无法播放以及卡顿问题。\n2、增加多个播放线路选择，多线路切换，播放不卡顿\n3、修复偶发性网络错误bug。\n4、提升离线下载速度，提升稳定性，修复闪退Bug。\n重要提示：旧版本将停止维护，届时将无法观看，请尽快升级最新版本，造成不便敬请谅解!",
+      "AndroidUrl" : "https://www.qnjyzn.com/03app0217-2.apk",
+      "AndroidVer" : "2.4.2",
+      "AppStoreMinVer" : "0.9.0"
     }
   }
 };
+
 $done({body:JSON.stringify(body)});

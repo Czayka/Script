@@ -1,3 +1,6 @@
+
+console.log($response.body)
+
 var body = {
   "retcode" : 0,
   "errmsg" : "",

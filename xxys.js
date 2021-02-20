@@ -74,7 +74,7 @@ var body = {
     "reqplay_addnum" : "0",
     "reqdown_addnum" : "0",
     "user" : {
-      "duetime" : "2021-02-24 00:36:54",
+      "duetime" : "2039-02-24 00:36:54",
       "sysgid" : "5",
       "uid" : "8344655",
       "uniqkey" : "JZIHJQ",
@@ -88,7 +88,7 @@ var body = {
       "mobi" : "86.18065988029",
       "username" : "~小小影迷-JZIHJQ",
       "goldcoin" : 1,
-      "regtime" : "2039-02-21 00:36:54",
+      "regtime" : "2021-02-21 00:36:54",
       "nickname" : "",
       "email" : "~1208506454",
       "isvip" : 1,

@@ -3,8 +3,8 @@ const $ = new Env('youthshare');
 let md5 = require('md5-node');
 let nowTime;
 let wxck;
-let articles = ["https://focu.youth.cn/sixhot/20210301?sid=36529016&uid=51753476&timestamp=1614612124&signature=JnXBk5Pw0ALYDjZx8G4ZegJwRszrX9l1olKN2Q3yzm6VREOr9p&share_id=51753476365290161614612139839&scene_id=fire_share&time=1614612140&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=d241eff02868fa907dbb4104b0d2892e",
-	       "https://focu.youth.cn/sixhot/20210228?sid=36514549&uid=51753476&timestamp=1614612977&signature=N3vEgwjmRqPndZp5kr7bxqKBXieVRJ21eoGDy9x2KzL8JAblYX&share_id=51753476365145491614612980026&scene_id=fire_share&time=1614612980&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=677b4a5e553a2375eb66ad5e0a0605a1"]
+let articles = ["https://focu.youth.cn/sixhot/20210302?sid=36551188&uid=51753476&timestamp=1614693011&signature=Kb8LA9nmqlJRV56zE31yVxDjdtRGNyZ4ZDNjYOMGgyPBWwreQ0&share_id=51753476365511881614693016954&scene_id=fire_share&time=1614693017&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=43e2c78ca75cdacd8dbc554dd3d4b71f",
+""]
 
 let encodearticles;
 

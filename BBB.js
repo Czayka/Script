@@ -50,8 +50,8 @@ if(CookieVal)$.setdata(CookieVal,'bbb_ck')
 !(async () => {
 
 $.msg($.name,"開始🎉🎉🎉")
-      //showCookie()
-      await cashCheck()
+      showCookie()
+      /*await cashCheck()
       await signIn()
       await checkWaterNum()
       await zaoWanDkInfo()
@@ -66,7 +66,7 @@ $.msg($.name,"開始🎉🎉🎉")
       await checkWaterNum()
       await checkHomeJin()
       await userInfo()
-      await showmsg()
+      await showmsg()*/
 
 })()
     .catch((e) => $.logErr(e))

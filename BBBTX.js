@@ -1,7 +1,7 @@
 
 const $ = Env("步步宝提现");
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const bububaotokenVal = $.getdata(`bububaotoken1`);
+const bububaotokenVal = process.env.BBB_bububaoTOKEN || $.getdata(`bububaotoken1`);
 const header = {
     'tokenstr': `${bububaotokenVal}`,
     'idfa': ``,
@@ -16,7 +16,8 @@ const header = {
     'Accept-Language': `zh-cn`,
     'Accept': `*/*`
 };
-tixian();
+    tixian();
+
 //现金提现
 function tixian(timeout = 0) {
     return new Promise((resolve) => {
@@ -28,8 +29,8 @@ function tixian(timeout = 0) {
             }
             $.post(url, async (err, resp, data) => {
                 try {
-                    msg = JSON.parse(data);
-                    console.log(msg);
+                    const {msg} = JSON.parse(data);
+                    $.msg($.name, ``, msg);
                 } catch (e) {
                     $.logErr(e, resp);
                 } finally {

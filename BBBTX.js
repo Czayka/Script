@@ -1,7 +1,7 @@
 
 const $ = Env("步步宝提现");
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const bububaotokenVal = $.getdata(`bububaotoken1`);
+const bububaotokenVal = $.getdata(`bububaotoken`);
 const header = {
     'tokenstr': `${bububaotokenVal}`,
     'idfa': ``,
@@ -17,6 +17,7 @@ const header = {
     'Accept': `*/*`
 };
     tixian();
+    $done();
 
 //现金提现
 function tixian(timeout = 0) {

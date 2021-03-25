@@ -17,7 +17,7 @@ const header = {
     'Accept': `*/*`
 };
     tixian();
-    $done();
+    $.done();
 
 //现金提现
 function tixian(timeout = 0) {

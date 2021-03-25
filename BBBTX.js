@@ -1,7 +1,7 @@
 
 const $ = Env("步步宝提现");
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const bububaotokenVal = process.env.BBB_bububaoTOKEN || $.getdata(`bububaotoken1`);
+const bububaotokenVal = $.getdata(`bububaotoken1`);
 const header = {
     'tokenstr': `${bububaotokenVal}`,
     'idfa': ``,

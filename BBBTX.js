@@ -30,7 +30,7 @@ function tixian(timeout = 0) {
             }
             $.post(url, async (err, resp, data) => {
                 try {
-                    msg = JSON.parse(data);
+                    const {msg} = JSON.parse(data);
                     console.log(msg);
                     $.msg($.name, ``, msg);
                 } catch (e) {

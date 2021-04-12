@@ -1,5 +1,5 @@
 
-const $ = Env("中强急速版每日红包");
+const $ = Env("中青急速版每日红包");
 const notify = $.isNode() ? require("./sendNotify") : ``;
 const Cookie = process.env.ZQ_RED_COOKIE;
 const Referer = process.env.ZQ_RED_REFERER;

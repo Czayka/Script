@@ -1,38 +1,37 @@
 
-const $ = Env("步步宝提现");
+const $ = Env("中强急速版每日红包");
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const bububaotokenVal = $.getdata(`bububaotoken`);
-const header = {
-    'tokenstr': `${bububaotokenVal}`,
-    'idfa': ``,
-    'ini': `21`,
-    'store': `0`,
-    'Content-Type': `application/x-www-form-urlencoded`,
-    'platform': `1`,
-    'version': `18`,
-    'imei': ``,
-    'Cookie': ``,
-    'Host': `bububao.duoshoutuan.com`,
-    'Accept-Language': `zh-cn`,
-    'Accept': `*/*`
+const Cookie = process.env.ZQ_RED_COOKIE;
+const Referer = process.env.ZQ_RED_REFERER;
+let notifyMessage = "";
+const headers = {
+    'Accept-Encoding' : `gzip, deflate, br`,
+    'Cookie' : `${Cookie}`,
+    'Connection' : `keep-alive`,
+    'Referer' : `${Referer}`,
+    'Accept' : `*/*`,
+    'Host' : `kd.youth.cn`,
+    'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148`,
+    'Accept-Language' : `zh-cn`,
+    'X-Requested-With' : `XMLHttpRequest`
 };
-    tixian();
+    getRed();
     $.done();
 
 //现金提现
-function tixian(timeout = 0) {
+function getRed(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
-                url: `https://bububao.duoshoutuan.com/user/tixian?`,
+                url: `https://kd.youth.cn/WebApi/Task/receiveBereadRed`,
                 headers: header,
-                body: `tx=50&`,
+                body: ``,
             }
-            $.post(url, async (err, resp, data) => {
+            $.get(url, async (err, resp, data) => {
                 try {
                     const {msg} = JSON.parse(data);
-                    console.log(msg);
                     $.msg($.name, ``, msg);
+                    notify.sendNotify($.name, msg);
                 } catch (e) {
                     $.logErr(e, resp);
                 } finally {

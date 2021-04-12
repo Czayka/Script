@@ -29,7 +29,10 @@ function getRed(timeout = 0) {
             }
             $.get(url, async (err, resp, data) => {
                 try {
-                    notifyMessage = JSON.stringify(data);
+                    const {code,msg,data} = data;
+                    notifyMessage = msg;
+                    if(data)
+                        notifyMessage += ",获得" + data.score + "青豆";
                     console.log(notifyMessage);
                     notify.sendNotify($.name, notifyMessage);
                 } catch (e) {

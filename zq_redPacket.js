@@ -29,7 +29,7 @@ function getRed(timeout = 0) {
             }
             $.get(url, async (err, resp, data) => {
                 try {
-                    $.msg($.name, ``, data);
+                    console.log(data);
                     notify.sendNotify($.name, data);
                 } catch (e) {
                     $.logErr(e, resp);

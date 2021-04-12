@@ -29,9 +29,8 @@ function getRed(timeout = 0) {
             }
             $.get(url, async (err, resp, data) => {
                 try {
-                    const {msg} = JSON.parse(data);
-                    $.msg($.name, ``, msg);
-                    notify.sendNotify($.name, msg);
+                    $.msg($.name, ``, data);
+                    notify.sendNotify($.name, data);
                 } catch (e) {
                     $.logErr(e, resp);
                 } finally {

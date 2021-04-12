@@ -1,14 +1,14 @@
 
 const $ = Env("中青急速版每日红包");
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const Cookie = process.env.ZQ_RED_COOKIE;
-const Referer = process.env.ZQ_RED_REFERER;
+const ZQ_RED_COOKIE = process.env.ZQ_RED_COOKIE;
+const ZQ_RED_REFERER = process.env.ZQ_RED_REFERER;
 let notifyMessage = "";
 const headers = {
     'Accept-Encoding' : `gzip, deflate, br`,
-    'Cookie' : `${Cookie}`,
+    'Cookie' : `${ZQ_RED_COOKIE}`,
     'Connection' : `keep-alive`,
-    'Referer' : `${Referer}`,
+    'Referer' : `${ZQ_RED_REFERER}`,
     'Accept' : `*/*`,
     'Host' : `kd.youth.cn`,
     'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148`,

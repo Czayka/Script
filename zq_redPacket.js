@@ -24,7 +24,7 @@ function getRed(timeout = 0) {
         setTimeout(() => {
             let url = {
                 url: `https://kd.youth.cn/WebApi/Task/receiveBereadRed`,
-                headers: header,
+                headers: headers,
                 body: ``,
             }
             $.get(url, async (err, resp, data) => {

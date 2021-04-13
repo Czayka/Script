@@ -5,35 +5,34 @@ const ZQ_RED_COOKIE = process.env.ZQ_RED_COOKIE;
 const ZQ_RED_REFERER = process.env.ZQ_RED_REFERER;
 let notifyMessage = "";
 const headers = {
-    'Accept-Encoding' : `gzip, deflate, br`,
-    'Cookie' : `${ZQ_RED_COOKIE}`,
-    'Connection' : `keep-alive`,
-    'Referer' : `${ZQ_RED_REFERER}`,
-    'Accept' : `*/*`,
-    'Host' : `kd.youth.cn`,
-    'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148`,
-    'Accept-Language' : `zh-cn`,
-    'X-Requested-With' : `XMLHttpRequest`
+    'Accept-Encoding': `gzip, deflate, br`,
+    'Cookie': `${ZQ_RED_COOKIE}`,
+    'Connection': `keep-alive`,
+    'Referer': `${ZQ_RED_REFERER}`,
+    'Accept': `*/*`,
+    'Host': `kd.youth.cn`,
+    'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148`,
+    'Accept-Language': `zh-cn`,
+    'X-Requested-With': `XMLHttpRequest`
 };
-    getRed();
-    $.done();
+getRed();
+$.done();
 
-//现金提现
 function getRed(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
                 url: `https://kd.youth.cn/WebApi/Task/receiveBereadRed`,
                 headers: headers,
-                body: ``,
             }
             $.get(url, async (err, resp, data) => {
                 try {
-                    let newData = data;
-                    let {code,msg,data} = newData;
+                    let result = JSON.parse(data);
+                    console.log(result);
+                    let { code, msg } = result;
                     notifyMessage = msg;
-                    if(code == 1)
-                        notifyMessage += ",获得" + data.score + "青豆";
+                    if (code == 1)
+                        notifyMessage += ",获得" + result.data.score + "青豆";
                     console.log(notifyMessage);
                     notify.sendNotify($.name, notifyMessage);
                 } catch (e) {
@@ -104,7 +103,7 @@ function Env(t, e) {
             const i = this.getdata(t);
             if (i) try {
                 s = JSON.parse(this.getdata(t))
-            } catch {}
+            } catch { }
             return s
         }
         setjson(t, e) {
@@ -216,7 +215,7 @@ function Env(t, e) {
         initGotEnv(t) {
             this.got = this.got ? this.got : require("got"), this.cktough = this.cktough ? this.cktough : require("tough-cookie"), this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar, t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar))
         }
-        get(t, e = (() => {})) {
+        get(t, e = (() => { })) {
             t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"]), this.isSurge() || this.isLoon() ? (this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
                 "X-Surge-Skip-Scripting": !1
             })), $httpClient.get(t, (t, s, i) => {
@@ -266,7 +265,7 @@ function Env(t, e) {
                 e(s, i, i && i.body)
             }))
         }
-        post(t, e = (() => {})) {
+        post(t, e = (() => { })) {
             if (t.body && t.headers && !t.headers["Content-Type"] && (t.headers["Content-Type"] = "application/x-www-form-urlencoded"), t.headers && delete t.headers["Content-Length"], this.isSurge() || this.isLoon()) this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
                 "X-Surge-Skip-Scripting": !1
             })), $httpClient.post(t, (t, s, i) => {

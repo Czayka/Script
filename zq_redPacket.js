@@ -32,7 +32,7 @@ function getRed(timeout = 0) {
                     let newData = data;
                     let {code,msg,data} = newData;
                     notifyMessage = msg;
-                    if(data)
+                    if(code == 1)
                         notifyMessage += ",获得" + data.score + "青豆";
                     console.log(notifyMessage);
                     notify.sendNotify($.name, notifyMessage);

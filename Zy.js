@@ -25,5 +25,5 @@ function randomNum(minNum,maxNum){
 } 
 
 function changeStr(str,index,changeStr){
-	 return str.substr(0, index) + changeStr+ str.substr(index + changeStr.length);
+	 return str.substr(0, index) + changeStr+ str.substr(index + 1 , str.length);
 }

@@ -3,12 +3,12 @@ const $ = new Env('youthshare');
 let md5 = require('md5-node');
 let nowTime;
 let wxck;
-let articles = ["https://focu.youth.cn/sixhot/20210307?sid=36676812&uid=51753476&timestamp=1615216352&signature=Zry0KPXd5RYDQVznvq4v8NeXGhLbk5PaGlE6go9mAJkeON2wjW&share_id=51753476366768121615216362885&scene_id=fire_share&time=1615216363&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=caf9b306d8a58e0c4c1355ffb35b0e9a",
-"https://focu.youth.cn/sixhot/20210308?sid=36710767&uid=51753476&timestamp=1615215721&signature=NXjrme82G3An0wVvWpamB25MXcyDOeN1gq9dJKyL5YRxElM6Zo&share_id=51753476367107671615215725035&scene_id=fire_share&time=1615215725&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=d1e23be09e702876774708e9522f2948",
-"https://focu.youth.cn/sixhot/20210308?sid=36692433&uid=51753476&timestamp=1615214876&signature=6y30XlmbkL9oxwAjJd1Px8gbAuZ5ANe1gMQE2nZKW8RNpvPrqz&share_id=51753476366924331615214879330&scene_id=fire_share&time=1615214879&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=7089836c646d18cb78c6470956ba19e3",
-"https://focu.youth.cn/sixhot/20210302?sid=36551188&uid=51753476&timestamp=1614693011&signature=Kb8LA9nmqlJRV56zE31yVxDjdtRGNyZ4ZDNjYOMGgyPBWwreQ0&share_id=51753476365511881614693016954&scene_id=fire_share&time=1614693017&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=43e2c78ca75cdacd8dbc554dd3d4b71f",
-"https://focu.youth.cn/sixhot/20210302?sid=36551291&uid=51753476&timestamp=1614692906&signature=NlWqkrwJYXnOvx5DKb1RBJVdnsMvpo9108g2GjM9RLeV3EPymQ&share_id=51753476365512911614692908428&scene_id=fire_share&time=1614692908&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=fdaec442fe079a0f4d2f4f37440ea786",
-"https://focu.youth.cn/sixhot/20210302?sid=36569249&uid=51753476&timestamp=1614693229&signature=N3vEgwjmRqPndZp5kr7bxzbPbueVRJ21eoGDy9x2KzL8JAblYX&share_id=51753476365692491614693233087&scene_id=fire_share&time=1614693233&phone_code=b6c0d513f8273bbf159f448470ea246a&app_version=1.7.9.9&sign=c0225d23c8142fa36aae12946cab66a2"]
+let articles = ["https://focu.youth.cn/sixhotnew/20210528?sid=38691506&uid=51753476&timestamp=1622280616&signature=bDjmABzyXE32GNxlOY4pvJ9ZBtqMWKAaZ9vnQ58wq06peMdkrP&scene_id=fire_share&share_id=51753476386915061622280629&time=1622280629",
+"https://focu.youth.cn/sixhotnew/20210523?sid=38580915&uid=51753476&timestamp=1622280616&signature=pznrQKZ06xYeGkD5yA4wzNDb3sdEPz018Nm2bvMqRWw9gPdLVO&scene_id=fire_share&share_id=51753476385809151622280703&time=1622280703",
+"https://focu.youth.cn/sixhotnew/20210525?sid=38612648&uid=51753476&timestamp=1622280616&signature=zLbNjJ5wr0YegkWEG37oryZebfMjRpY4DP6vqOn8lB2py9XRQx&scene_id=fire_share&share_id=51753476386126481622280738&time=1622280738",
+"https://focu.youth.cn/sixhotnew/20210529?sid=38706440&uid=51753476&timestamp=1622280751&signature=dvG9ReJyYL36goEAWV46l8AyJUWOeQpaMQD0OPmnkw5jBl2X8Z&scene_id=fire_share&share_id=51753476387064401622280762&time=1622280762",
+"https://focu.youth.cn/sixhotnew/20210523?sid=38585709&uid=51753476&timestamp=1622280616&signature=Qg9jzmlY6xZnPq3DGO1dEA3yJHAM52d4XrLEVMWpRd8Neb0JkA&scene_id=fire_share&share_id=51753476385857091622280776&time=1622280776",
+"https://focu.youth.cn/sixhotnew/20210527?sid=38662825&uid=51753476&timestamp=1622280616&signature=B3MvlKp05kgOXPA9oG7nD6E5VC0eVK31erYEjxzQLWmw8DnyJb&scene_id=fire_share&share_id=51753476386628251622280792&time=1622280792"]
 
 let encodearticles;
 

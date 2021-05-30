@@ -1,12 +1,28 @@
-var modifiedHeaders = $request.headers;
+var modifiedUrl = $request.url;
 
-let oldId = '66zW6Uzl9RtrLx2vqoNicPUCWDkxKuQmV8JI4Eef0DcstXu/fCPanf2eK2Maajek4+l+XU0AGaTk63dhIZNZYFANwkZ/WHn3l1pVoJh10/0=';
+let oldUrl = modifiedUrl;
+let oldId = "2088112805292903"
+let newUrl = changeURLArg(oldUrl,"userId",changeStr(oldId,randomNum(0,oldId.length),randomNum(0,9)))
 
-let newId = changeStr(oldId,randomNum(22,40),randomNum(0,9))
 
-modifiedHeaders['alipayMiniMark'] = newId;
+$done({url : newUrl});
 
-$done({headers : modifiedHeaders});
+
+function changeURLArg(url,arg,arg_val){
+    var pattern=arg+'=([^&]*)';
+    var replaceText=arg+'='+arg_val; 
+    if(url.match(pattern)){
+        var tmp='/('+ arg+'=)([^&]*)/gi';
+        tmp=url.replace(eval(tmp),replaceText);
+        return tmp;
+    }else{ 
+        if(url.match('[\?]')){ 
+            return url+'&'+replaceText; 
+        }else{ 
+            return url+'?'+replaceText; 
+        } 
+    }
+}
 
 
 //生成从minNum到maxNum的随机数

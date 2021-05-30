@@ -2,7 +2,7 @@ var modifiedHeaders = $request.headers;
 
 let oldId = '66zW6Uzl9RtrLx2vqoNicPUCWDkxKuQmV8JI4Eef0DcstXu/fCPanf2eK2Maajek4+l+XU0AGaTk63dhIZNZYFANwkZ/WHn3l1pVoJh10/0=';
 
-let newId = changeStr(oldId,randomNum(0,40),randomNum(0,9))
+let newId = changeStr(oldId,randomNum(22,40),randomNum(0,9))
 
 modifiedHeaders['alipayMiniMark'] = newId;
 

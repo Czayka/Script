@@ -2,8 +2,9 @@ var modifiedUrl = $request.url;
 
 let oldUrl = modifiedUrl;
 let oldId = "2088112805292903"
+let deviceId = "XD4VLeAqG3cDAEK3xhkw81Ac"
 let newUrl = changeURLArg(oldUrl,"userId",changeStr(oldId,randomNum(0,oldId.length),randomNum(0,9)))
-
+newUrl = changeURLArg(newUrl,"deviceId",changeStr(newUrl,randomNum(0,newUrl.length),randomNum(0,9)))
 
 $done({url : newUrl});
 

@@ -1,0 +1,38 @@
+name: 中青看点急速版7日打卡转盘
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3,11,22 * * *'
+  watch:
+    types: started
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        ZQ_RED_COOKIE: ${{ secrets.ZQ_RED_COOKIE }}
+        ZQ_RED_REFERER: ${{ secrets.ZQ_RED_REFERER }}		
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【中青看点急速版7日打卡转盘】'
+        run: |
+          node zq_dkzp.js
+        env:
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          PUSH_PLUS_TOKEN:  ${{ secrets.PUSH_PLUS_TOKEN }}

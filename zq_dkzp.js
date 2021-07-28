@@ -10,9 +10,9 @@ const headers = {
     'Content-Type' : `application/x-www-form-urlencoded`,
     'Origin' : `https://kd.youth.cn`,
     'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148`,
-    'Cookie': `${ZQ_DKZP_COOKIE}`,
+    'Cookie': `sensorsdata2019jssdkcross=%7B%22distinct_id%22%3A%2251753476%22%2C%22%24device_id%22%3A%2217ab7dad1f9aef-0c59d52b886dbc8-754c1551-304704-17ab7dad1faa0d%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2217ab7dad1f9aef-0c59d52b886dbc8-754c1551-304704-17ab7dad1faa0d%22%7D; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2251753476%22%2C%22%24device_id%22%3A%2217abd4676f728b-0c70b7ba8075728-754c1551-304704-17abd4676f898a%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2217abd4676f728b-0c70b7ba8075728-754c1551-304704-17abd4676f898a%22%7D`,
     'Host': `kd.youth.cn`,
-    'Referer': `${ZQ_DKZP_REFERER}`,
+    'Referer': `https://kd.youth.cn/h5/20190603cardactive/?uuid=53e6acaca0753c0832dc145aafc2bc2a&sign=bdb450a499fd3003b1d0e5612c1c88db&channel_code=80000000&uid=51753476&%24device_id=48514596&channel=80000000&access=Wlan&app_version=2.2.0&device_platform=iphone&cookie_id=9bc1a12aa6cd57464f530c50fe9c2719&cookie_id=9bc1a12aa6cd57464f530c50fe9c2719&openudid=53e6acaca0753c0832dc145aafc2bc2a&device_type=1&device_brand=iphone&sm_device_id=20201127231547fa4fe1273be03afe3fffd8be38f89ce9014361cd84a7318d&device_id=48514596&version_code=220&os_version=14.2&cookie=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualq2jmrCarWOwt5dqhLKGma_OqmqXr6NthJl7mI-shMmXeqDau4StacS3o7GFonrfr9_Eq4KJebGEY2Ft&cookie=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualq2jmrCarWOwt5dqhLKGma_OqmqXr6NthJl7mI-shMmXeqDau4StacS3o7GFonrfr9_Eq4KJebGEY2Ft&device_model=iPhone%207%20Plus&subv=1.5.1`,
     'Accept': `*/*`,
     'Accept-Language': `zh-cn`
 };

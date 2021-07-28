@@ -23,7 +23,7 @@ function getRed(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
-                url: `https://kd.youth.cn/WebApi/PunchCard/luckdraw
+                url: `https://kd.youth.cn/WebApi/PunchCard/luckdraw`,
                 headers: headers,
             }
             $.post(url, async (err, resp, data) => {

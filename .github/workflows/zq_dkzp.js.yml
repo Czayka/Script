@@ -3,7 +3,7 @@ name: 中青看点急速版7日打卡转盘
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 3,11,22 * * *'
+    - cron: '30 8,10 * * *'
   watch:
     types: started
 jobs:
@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        ZQ_RED_COOKIE: ${{ secrets.ZQ_RED_COOKIE }}
-        ZQ_RED_REFERER: ${{ secrets.ZQ_RED_REFERER }}		
+        ZQ_DKZP_COOKIE: ${{ secrets.ZQ_DKZP_COOKIE}}
+        ZQ_DKZP_REFERER: ${{ secrets.ZQ_DKZP_REFERER }}		
     steps:
       - name: Checkout
         uses: actions/checkout@v2

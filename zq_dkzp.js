@@ -23,7 +23,7 @@ function getRed(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
-                url: `https://kd.youth.cn/WebApi/PunchCard/luckdraw?uuid=53e6acaca0753c0832dc145aafc2bc2a&sign=bdb450a499fd3003b1d0e5612c1c88db&channel_code=80000000&uid=51753476&%24device_id=48514596&channel=80000000&access=Wlan&app_version=2.2.0&device_platform=iphone&cookie_id=9bc1a12aa6cd57464f530c50fe9c2719&cookie_id=9bc1a12aa6cd57464f530c50fe9c2719&openudid=53e6acaca0753c0832dc145aafc2bc2a&device_type=1&device_brand=iphone&sm_device_id=20201127231547fa4fe1273be03afe3fffd8be38f89ce9014361cd84a7318d&device_id=48514596&version_code=220&os_version=14.2&cookie=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualq2jmrCarWOwt5dqhLKGma_OqmqXr6NthJl7mI-shMmXeqDau4StacS3o7GFonrfr9_Eq4KJebGEY2Ft&cookie=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualq2jmrCarWOwt5dqhLKGma_OqmqXr6NthJl7mI-shMmXeqDau4StacS3o7GFonrfr9_Eq4KJebGEY2Ft&device_model=iPhone%207%20Plus&subv=1.5.1`,
+                url: `https://kd.youth.cn/WebApi/PunchCard/luckdraw
                 headers: headers,
             }
             $.post(url, async (err, resp, data) => {

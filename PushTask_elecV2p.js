@@ -359,9 +359,10 @@ async function getCronList() {
         } else {
           if (safeGet(data)) {
             // $.log(data)
+            console.log(data)
             data = JSON.parse(data);
             allinoneList = data.task
-            console.log(allinoneList);
+            console.log(JSON.stringify(allinoneList));
           }
         }
       } catch (e) {

@@ -146,7 +146,7 @@ $.KEY_cursessions = 'chavy_boxjs_cur_sessions'
       //++++++++++++++++++++++++++++++++++++++++ updateTaskUrlList
       console.log(`\n🤖[${$.name}]:💲核对AllinOne订阅,生成黑名单`)
       const v2pUpdateObjArr = new Array();
-      for (let i = 0; i < updateTaskUrlList.length; i++) {
+      /*for (let i = 0; i < updateTaskUrlList.length; i++) {
         let checkUrl = updateTaskUrlList[i].match(/\w+\.js/g)[0]
         for (let i = 0; i < allinoneList.length; i++) {
           let checkobj = allinoneList[i];
@@ -154,7 +154,7 @@ $.KEY_cursessions = 'chavy_boxjs_cur_sessions'
             v2pUpdateObjArr.push(checkobj);
           }
         }
-      }
+      }*/
       let v2pUpdateObjArr2 = unique(v2pUpdateObjArr)
       console.log(`→黑名单定时任务个数为:${v2pUpdateObjArr2.length}个`);
       //++++++++++++++++++++++++++++++++++++++++

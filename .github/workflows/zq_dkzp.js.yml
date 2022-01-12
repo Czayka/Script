@@ -3,7 +3,7 @@ name: 中青看点急速版7日打卡转盘
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 8,10 * * *'
+    - cron: '30 8,10 29 2 *'
   watch:
     types: started
 jobs:
